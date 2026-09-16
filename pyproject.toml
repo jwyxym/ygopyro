@@ -1,6 +1,6 @@
 [project]
 name = "ygopyro"
-version = "0.1.4.fix1"
+version = "0.1.4.post1"
 description = ""
 readme = "README.md"
 authors = [
