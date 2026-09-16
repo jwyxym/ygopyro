@@ -13,6 +13,7 @@ crate-type = ["cdylib"]
 # "abi3-py39" tells pyo3 (and maturin) to build using the stable ABI with minimum Python version 3.9
 pyo3 = { version = "0.29.0", features = ["extension-module", "abi3-py39"] }
 pyo3-async-runtimes = { version = "0.29.0", features = ["tokio-runtime"] }
+tokio = { version = "1", features = ["net", "rt", "sync"] }
 ygopro = { version = "0.1.4", features = ["card", "zip", "koishi"] }
 ygopro-data = { version = "0.1.1", default-features = false }
 ygopro-core-wrapper = { version = "0.1.3", default-features = false, features = ["koishi"] }

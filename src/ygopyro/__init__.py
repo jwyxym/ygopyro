@@ -1,2 +1,2 @@
-from ygopyro._core import start_server
-__all__ = ["start_server"]
+from ygopyro._core import start_server, stop_server
+__all__ = ["start_server", "stop_server"]

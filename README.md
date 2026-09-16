@@ -26,16 +26,17 @@ uv add ygopyro
 
 ## 使用
 
-`start_server` 是一个异步函数，需要使用 `await` 调用：
+`start_server` 是一个异步函数。它会启动一个后台服务器并返回唯一的服务器 ID；停止服务器时将该 ID 传给 `stop_server`：
 
 ```python
 import asyncio
 
-from ygopyro import start_server
+from ygopyro import start_server, stop_server
 
 
 async def main() -> None:
-    await start_server(
+    server_id = await start_server(
+        port=7911,
         lflist=0,
         rule=0,
         mode=0,
@@ -48,6 +49,10 @@ async def main() -> None:
         draw_count=1,
         time_limit=180,
     )
+
+    # 运行一段时间后停止指定服务器
+    await asyncio.sleep(10)
+    stop_server(server_id)
 
 
 if __name__ == "__main__":
