@@ -58,5 +58,3 @@ async def main() -> None:
 if __name__ == "__main__":
     asyncio.run(main())
 ```
-
-服务器会持续运行，结束程序时可以使用 `Ctrl+C`。
